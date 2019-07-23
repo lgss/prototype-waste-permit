@@ -1,0 +1,84 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Vehicle details
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="10-select-vehicle1">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Vehicle Details</h1>
+      <!--Action is the name of the next page link text-->
+      <form class="form" action="30-your-details" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                Is the vehicle hired?
+              </h1>
+            </legend>
+            <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="month">
+                <label class="govuk-label govuk-radios__label" for="changed-name-1">
+                  No
+                </label> </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
+                <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                  Yes
+                </label> </div>
+            </div>
+          </fieldset>
+        </div>
+        <!--Vehicle reg question-->
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="width-10">
+            Vehicle registration number
+          </label>
+          <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+        </div>
+        <!--/Vehicle reg question-->
+        <!--Vehicle type question-->
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="sort">
+            Vehicle type
+          </label>
+          <select class="govuk-select" id="sort" name="sort">
+            <option value="published">Car towing a trailer</option>
+            <option value="views">Horse box</option>
+            <option value="comments">Van</option>
+            <option value="comments" selected>Select</option>
+          </select>
+        </div>
+        <!--/Vehicle type question-->
+        <!--Vehicle color question-->
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="sort">
+            Vehicle Colour
+          </label>
+          <select class="govuk-select" id="sort" name="sort">
+            <option value="published">Red</option>
+            <option value="views">Yellow</option>
+            <option value="comments">Blue</option>
+            <option value="comments" selected>Select</option>
+          </select>
+        </div>
+        <!--/Vehicle color question-->
+        <p><small>We need your personal details to validate your permit and in case we need to contact you. The information provided will only be processed for the purpose of providing you with a permit. Your details will be kept on file for 15 months from the date of your application. Northamptonshire County Council will not use this information for marketing purposes or share this data with third parties, with the exception of our contractor who operates the Household Waste Recycling Centres on behalf of Northamptonshire County Council.</small></p>
+        <p><small>For full details of how we process personal data please see <a href="#" >our full privacy notice</a> </small></p>        
+        <button class="govuk-button">Next</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

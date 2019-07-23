@@ -1,0 +1,92 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Your details
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="20-vehicle-details">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Your details</h1>
+
+      <form class="form" action="40-confirmation" method="post">
+        <!--Name field-->
+        <div class="govuk-form-group">
+          <label class="govuk-label--m" for="full-name">
+            Full name
+          </label>
+          <input class="govuk-input" id="full-name" name="full-name" type="text" autocomplete="name" spellcheck="false">
+        </div>
+        <!--/Name field-->
+        <!--Email field-->
+        <div class="govuk-form-group">
+          <label class="govuk-label--m" for="email">
+            Email address
+          </label>
+          <span id="email-hint" class="govuk-hint">
+            We’ll only use this to send you a receipt
+          </span>
+          <input class="govuk-input" id="email" name="email" type="email" aria-describedby="email-hint" autocomplete="email" spellcheck="false">
+        </div>
+        <!--/Email field-->
+        <!--Adress pattern-->
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              What is your address?
+            </h1>
+          </legend>
+        
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-line-1">
+              Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
+            </label>
+            <input class="govuk-input" id="address-line-1" name="address-line-1" type="text">
+          </div>
+        
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-line-2">
+              <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+            </label>
+            <input class="govuk-input" id="address-line-2" name="address-line-2" type="text">
+          </div>
+        
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-town">
+              Town or city
+            </label>
+            <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text">
+          </div>
+        
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-county">
+              County
+            </label>
+            <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text">
+          </div>
+        
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-postcode">
+              Postcode
+            </label>
+            <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
+          </div>
+        
+        </fieldset>
+        <!--/Adress pattern-->
+        <p><small>We need your personal details to validate your permit and in case we need to contact you. The information provided will only be processed for the purpose of providing you with a permit. Your details will be kept on file for 15 months from the date of your application. Northamptonshire County Council will not use this information for marketing purposes or share this data with third parties, with the exception of our contractor who operates the Household Waste Recycling Centres on behalf of Northamptonshire County Council.</small></p>
+        <p><small>For full details of how we process personal data please see <a href="#" >our full privacy notice</a> </small></p>
+                <button class="govuk-button">Next</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
