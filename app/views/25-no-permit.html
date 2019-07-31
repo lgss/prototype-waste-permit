@@ -1,0 +1,39 @@
+{% extends "layout_unbranded.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Confirmation page example
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">No permit needed</h1>
+      </div>
+
+      <p>
+        Thank you for testing this prototype. We have not saved any details that you filled in this application.
+      </p>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+      <p>Nothing, regarding the application :) But if you like the direction we are taking, we will add more realistic functions to the prototype such as validation and branching routes. These will help minimise user error and in capturing quality data.</p>
+      <h2 class="govuk-heading-m">Why prototype?</h2>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>It's low-cost and cheap to build!</li>
+        <li>We can test small elements instead of a larger product</li>
+        <li>It means we fail early and learn</li>
+        <li>Feedback can be built in to new designs and can be tested again</li>
+        <li>We can measure to see if it meets the needs we have identified in our discovery</li>
+      </ul>
+      <p><a href="https://app.slack.com/client/T02GHC5EA/CLND6FBSQ/thread/CLND6FBSQ-1563873503.006900">What did you think of this sort of prototype?</a> (Feedback on slack. Thank you.)</p>
+
+
+    </div>
+  </div>
+
+{% endblock %}
